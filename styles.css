@@ -75,6 +75,180 @@ p {
   color: #e7e7e7;
 }
 
+.hero {
+  position: relative;
+  background-image: url('imagenes/fondohero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* oscurito */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px; /* o lo que quieras */
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+/* Título general blanco */
+.h2-custom.h2-blanco {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+/* Título general negro */
+.h2-custom.h2-negro {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  position: relative;
+  text-align: center;
+  color: #000;
+}
+
+/* 4. About */
+.about-section {
+  position: relative;
+  background-image: url('imagenes/fondoabout.png'); /* Cambialo por tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 100px 0;
+  color: #252525;          /* texto blanco para que se vea sobre overlay oscuro */
+  text-align: center;   /* todo centrado */
+}
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.2); /* overlay negro semitransparente */
+  z-index: 1;
+}
+
+.about-section .container {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;   /* para que el texto no sea muy ancho */
+  margin: 0 auto;     /* centrar container */
+}
+
+.h2-custom::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--primary-color);
+  margin: 10px auto 0;
+}
+
+.about-section p {
+  color: #242424;         /* párrafo blanco */
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+
+
+/* 4. Contenido */
+.contenido-section {
+  position: relative;
+  background-image: url('imagenes/fondocontenido.png'); /* Cambialo por tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 100px 60px;
+  color: #fff;          /* texto blanco para que se vea sobre overlay oscuro */
+  text-align: center;   /* todo centrado */
+}
+
+.contenido-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.2); /* overlay negro semitransparente */
+  z-index: 1;
+}
+
+.contenido-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Título con línea decorativa */
+.h2-custom {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #fff;
+  position: relative;
+}
+
+.h2-custom::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #e4ca47;
+  margin: 10px auto 0;
+}
+
+/* Tarjetas */
+.contenido-section .card {
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f5f5f5;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contenido-section .card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+/* Título de cada card */
+.contenido-section .card h5 {
+  font-weight: 700;
+  color: #242424;
+}
+
+/* Texto de cada card */
+.contenido-section .card p {
+  color: #e4ca47;
+  font-size: 0.95rem;
+  margin-top: 8px;
+}
+
 /* Botones */
 .btn {
   border-radius: 50px;
@@ -100,6 +274,58 @@ p {
 .btn-outline-dark:hover {
   background-color: var(--primary-color);
   color: #fff;
+}
+
+/* 4. Geek */
+.geek-section {
+  position: relative;
+  background-image: url('imagenes/fondogeek.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.geek-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.2); /* overlay negro semitransparente */
+  z-index: 1;
+}
+
+.geek-section .row {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.geek-section .col-lg-6 h2,
+.geek-section .col-lg-6 p {
+  color: #e7e7e7; /* texto claro como en HERO */
+  text-align: left;
+}
+
+.geek-section .col-lg-6 h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.geek-section .col-lg-6 p {
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 /* 5. SECCIONES */
@@ -131,6 +357,31 @@ section h2::after {
   --bs-accordion-active-bg: #e4ca47; /* fondo amarillo cuando está abierto */
   --bs-accordion-active-color: #000; /* texto negro */
 }  
+
+/* Testimonios*/
+.testimonios-section {
+  position: relative;
+  background-image: url('imagenes/fondogeek.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.testimonios-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.2); /* overlay negro semitransparente */
+  z-index: 1;
+}
 
 /* 6. CARDS */
 .card {
@@ -175,6 +426,23 @@ section h2::after {
   border-radius: 5px;
 }
 
+.planes-section {
+  background-color: var(--primary-color); /* usa el amarillo ya definido */
+  color: #242424; /* texto oscuro para que se lea sobre fondo claro */
+}
+
+.planes-section h2,
+.planes-section p,
+.planes-section ul li,
+.planes-section .card-title {
+  color: #242424; /* asegura legibilidad en títulos, párrafos y listas */
+}
+
+.planes-section .card {
+  background-color: #fff; /* mantiene las tarjetas sobre fondo claro */
+}
+
+
 /* 8. FORMULARIO */
 form .form-control {
   border-radius: 8px;
@@ -211,6 +479,130 @@ img.rounded-circle {
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
 }
 
+
+
+.detalle1 {
+  position: relative;
+  background-image: url('imagenes/fondodetalle1.png'); /* Cambiá por tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.detalle1::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* overlay opcional */
+  z-index: 1;
+}
+
+.detalle1 .container {
+  position: relative;
+  z-index: 2;
+}
+
+.detalle1 p {
+  color: #ffffff;
+}
+
+.detalle-contenido {
+  position: relative;
+  background-image: url('imagenes/fondogeek.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 60px 0;
+  box-sizing: border-box;
+  color: #fff;
+  flex-direction: column;
+  z-index: 0;
+}
+
+.detalle-contenido::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.2);
+  z-index: 0;
+}
+
+.detalle-contenido > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.cta {
+  position: relative;
+  background-image: url('imagenes/fondogeek.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 60px 0;
+  box-sizing: border-box;
+  color: #fff;
+  flex-direction: column;
+  z-index: 0;
+}
+.cta-title {
+  font-size: 3.5rem; /* Más grande */
+  font-weight: 900;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #ffffff; /* texto negro */
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: normal;
+}
+
+.cta-title .highlight {
+  color: #fbb615; /* naranja */
+  font-weight: 900;
+}
+
+.btn-cta {
+  background-color: #fbb615;
+  color: #fff;
+  padding: 12px 32px;
+  font-weight: 700;
+  border-radius: 4px;
+  text-transform: none;
+  font-size: 1.1rem;
+  border: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-color: #e6a20e;
+  color: #fff;
+}
+
 /* ============================== */
 /* CUSTOM HELPER CLASSES */
 /* ============================== */
@@ -232,12 +624,6 @@ img.rounded-circle {
   color: var(--primary-color);
 }
 
-.h2-custom {
-  font-size: 2.5rem;
-  font-weight: 600;
-  line-height: 1.3;
-  color: var(--light-color);
-}
 
 .h3-custom {
   font-size: 2rem;
